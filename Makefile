@@ -20,6 +20,14 @@ EXECUTABLE = $(OUTDIR)/$(PROJECT).elf
 
 MAP_FILE = $(OUTDIR)/$(PROJECT).map
 
+GFXLIB = ugfx
+DEMODIR = $(GFXLIB)/demos/applications/combo
+GFXINC += $(DEMODIR)
+GFXSRC += $(DEMODIR)/main.c \
+			$(DEMODIR)/mandelbrot.c \
+			$(DEMODIR)/bounce.c
+
+
 SRC_DIR  =	 Drivers/STM32F4xx_HAL_Driver/Src \
 			 Src
 
@@ -28,6 +36,8 @@ INC_DIR = 	 Drivers/CMSIS/Device/ST/STM32F4xx/Include \
 		 	 Drivers/STM32F4xx_HAL_Driver/Inc \
 			 Drivers/STM32F4xx_HAL_Driver/Inc/Legacy \
 			 Inc
+
+include ugfx/gfx.mk
 ######################################
 # source
 ######################################
