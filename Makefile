@@ -14,7 +14,7 @@ OPT = -O3
 # Build path
 OUTDIR =  build
 TOOL_DIR = tool
-213123123
+
 BIN_IMAGE = $(OUTDIR)/$(PROJECT).bin
 EXECUTABLE = $(OUTDIR)/$(PROJECT).elf
 
